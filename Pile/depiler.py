@@ -8,4 +8,4 @@ def depiler(stack):
         stack.sommet -= 1
         return element
     else:
-        return False
+        return None

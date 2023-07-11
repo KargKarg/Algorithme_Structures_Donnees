@@ -1,4 +1,19 @@
-def entasser(arr, indice):
+def entasser(arr, indice: int) -> None:
+    """
+    Arguments:
+        - arr (instance): tableau crée par la classe Tableau.
+        - indice (int): l'indice correspondant au noeud du tas.
+
+    Retours:
+        - None
+
+    Complexité:
+        - O(log2(n))
+
+    Résumé:
+        Fonction arrange un tableau en tas binaire.
+
+    """
     gauche = 2*indice
     droite = 2*indice+1
     maximum = indice
@@ -13,6 +28,20 @@ def entasser(arr, indice):
         entasser(arr, maximum)
 
 
-def construire_tas(arr):
+def construire_tas(arr) -> None:
+    """
+    Arguments:
+        - arr (instance): tableau crée par la classe Tableau.
+
+    Retours:
+        - None
+
+    Complexité:
+        - O(n)
+
+    Résumé:
+        Fonction prend un tableau et transforme ce même tableau en tas binaire.
+
+    """
     for i in range((arr.fin+1)//2, -1, -1):
         entasser(arr, i)

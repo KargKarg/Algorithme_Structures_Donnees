@@ -1,4 +1,18 @@
-def tri_selection(arr):
+def tri_selection(arr) -> None:
+    """
+    Arguments:
+        - arr (instance): tableau crée par la classe Tableau.
+
+    Retours:
+        - None.
+
+    Complexité:
+        - O(n^2)
+
+    Résumé:
+        Fonction qui tri le tableau avec le tri par séléction.
+
+    """
 
     for i in range(arr.fin):
         minimum = i
@@ -10,8 +24,22 @@ def tri_selection(arr):
             arr.vue[i] = flag
 
 
-def tri_selection_recursif(arr, i=0):
+def tri_selection_recursif(arr, i: int = 0) -> None:
+    """
+    Arguments:
+        - arr (instance): tableau crée par la classe Tableau.
+        - i (int): correspond à l'indice du sous-tableau à trier.
 
+    Retours:
+        - None.
+
+    Complexité:
+        - O(n^2)
+
+    Résumé:
+        Fonction qui tri le tableau avec le tri par séléction de manière recursive.
+
+    """
     if i == arr.fin+1:
         return
 

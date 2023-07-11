@@ -3,7 +3,22 @@ from inserer import inserer
 from min_max import min_et_max
 
 
-def tri_denombrement(arr):
+def tri_denombrement(arr) -> None:
+    """
+    Arguments:
+        - arr (instance): tableau crée par la classe Tableau.
+
+    Retours:
+        - None.
+
+    Complexité:
+        - O(n^2)
+
+    Résumé:
+        Fonction qui tri le tableau à l'aide d'un deuxième tableau qui permettra de dénombrer les entiers.
+        Fonctionne plutôt bien lorsque le maximum d'une tableau n'est pas une valeur très grande.
+
+    """
     compte = tableau.Tableau(min_et_max(arr)[1]+1)
 
     for i in range(compte.nmax):

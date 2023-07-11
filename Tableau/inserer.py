@@ -1,4 +1,20 @@
-def inserer(arr, objet):
+def inserer(arr, objet: any) -> bool:
+    """
+    Arguments:
+        - arr (instance): tableau crée par la classe Tableau.
+        - objet (any): élément de n'importe quel type.
+
+    Retours:
+        - True: si l'élément est inséré.
+        - Faux: si le tableau est plein.
+
+    Complexité:
+        - O(1)
+
+    Résumé:
+        Fonction qui ajoute l'élément à la fin du tableau.
+
+    """
     if arr.fin == arr.nmax - 1:
         return False
     else:
