@@ -1,7 +1,7 @@
 def tri_bulle(arr) -> None:
     """
     Arguments:
-        - arr (instance): tableau crée par la classe Tableau.
+        - arr (instance): tableau créé par la classe Tableau.
 
     Retours:
         - None

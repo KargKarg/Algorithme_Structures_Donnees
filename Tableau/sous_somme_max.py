@@ -4,7 +4,7 @@ from sous_somme import sous_somme
 def sous_somme_max(arr) -> tuple:
     """
     Arguments:
-        - arr (instance): tableau crée par la classe Tableau.
+        - arr (instance): tableau créé par la classe Tableau.
 
     Retours:
         - maxi (int): la sous-somme maximale.

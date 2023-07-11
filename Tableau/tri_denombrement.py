@@ -6,7 +6,7 @@ from min_max import min_et_max
 def tri_denombrement(arr) -> None:
     """
     Arguments:
-        - arr (instance): tableau crée par la classe Tableau.
+        - arr (instance): tableau créé par la classe Tableau.
 
     Retours:
         - None.

@@ -1,7 +1,7 @@
 def supprimer(arr, objet: any) -> bool:
     """
     Arguments:
-        - arr (instance): tableau crée par la classe Tableau.
+        - arr (instance): tableau créé par la classe Tableau.
         - objet (any): élément à retirer du tableau.
 
     Retours:

@@ -1,7 +1,7 @@
 def entasser(arr, indice: int) -> None:
     """
     Arguments:
-        - arr (instance): tableau crée par la classe Tableau.
+        - arr (instance): tableau créé par la classe Tableau.
         - indice (int): l'indice correspondant au noeud du tas.
 
     Retours:
@@ -31,7 +31,7 @@ def entasser(arr, indice: int) -> None:
 def construire_tas(arr) -> None:
     """
     Arguments:
-        - arr (instance): tableau crée par la classe Tableau.
+        - arr (instance): tableau créé par la classe Tableau.
 
     Retours:
         - None

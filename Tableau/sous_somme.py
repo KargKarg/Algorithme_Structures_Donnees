@@ -1,7 +1,7 @@
 def sous_somme(arr, g, d):
     """
     Arguments:
-        - arr (instance): tableau crée par la classe Tableau.
+        - arr (instance): tableau créé par la classe Tableau.
         - g (int): l'indice délimitant le bord gauche du sous-tableau.
         - d (int): l'indice délimitant le bord droit du sous-tableau.
 

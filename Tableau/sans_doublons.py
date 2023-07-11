@@ -5,7 +5,7 @@ from inserer import inserer
 def sans_doublons(arr) -> None:
     """
     Arguments:
-        - arr (instance): tableau crée par la classe Tableau.
+        - arr (instance): tableau créé par la classe Tableau.
 
     Retours:
         - None.
@@ -14,7 +14,7 @@ def sans_doublons(arr) -> None:
         - 0(n)
 
     Résumé:
-        Fonction qui parcours l'ensemble du tableau pour retirer les doublons, un tableau sans doublon est crée et
+        Fonction qui parcours l'ensemble du tableau pour retirer les doublons, un tableau sans doublon est crééet
         remplacera le tableau de base.
 
     """

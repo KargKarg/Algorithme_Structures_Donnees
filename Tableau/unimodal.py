@@ -1,7 +1,7 @@
 def unimodal(arr) -> bool:
     """
     Arguments:
-        - arr (instance): tableau crée par la classe Tableau.
+        - arr (instance): tableau créé par la classe Tableau.
 
     Retours:
         - True: si le tableau est unimodal.

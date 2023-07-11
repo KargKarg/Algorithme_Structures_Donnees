@@ -4,7 +4,7 @@ import math
 def maximum_unimodal(arr) -> int:
     """
     Arguments:
-        - arr (instance): tableau unimodal crée par la classe Tableau.
+        - arr (instance): tableau unimodal créé par la classe Tableau.
 
     Retours:
         - (int): l'entier maximum du tableau unimodal.

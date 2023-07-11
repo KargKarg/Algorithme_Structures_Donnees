@@ -1,7 +1,7 @@
 def tri_selection(arr) -> None:
     """
     Arguments:
-        - arr (instance): tableau crée par la classe Tableau.
+        - arr (instance): tableau créé par la classe Tableau.
 
     Retours:
         - None.
@@ -27,7 +27,7 @@ def tri_selection(arr) -> None:
 def tri_selection_recursif(arr, i: int = 0) -> None:
     """
     Arguments:
-        - arr (instance): tableau crée par la classe Tableau.
+        - arr (instance): tableau créé par la classe Tableau.
         - i (int): correspond à l'indice du sous-tableau à trier.
 
     Retours:

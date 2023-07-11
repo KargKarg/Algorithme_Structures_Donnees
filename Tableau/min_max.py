@@ -1,7 +1,7 @@
 def min_et_max(arr) -> tuple:
     """
     Arguments:
-        - arr (instance): tableau crée par la classe Tableau.
+        - arr (instance): tableau créé par la classe Tableau.
 
     Retours:
         - (tuple): le minimum, le maxium du tableau
