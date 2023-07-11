@@ -1,4 +1,4 @@
-def ajouter(liste, objet: any)  -> bool:
+def ajouter(liste, objet: any) -> bool:
     """
     Arguments:
         - liste (instance): liste chaînée créée par la classe Liste.
@@ -14,5 +14,5 @@ def ajouter(liste, objet: any)  -> bool:
         Fonction qui ajoute un élément à la liste chaînée.
 
     """
-    liste.vue.append(objet)
+    liste.vue = [objet] + liste.vue
     return True
