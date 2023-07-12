@@ -1,7 +1,7 @@
 from Structures import arbre
 
 
-def ajouter_feuille(noeud, entier: int) -> None:
+def inserer_feuille(noeud, entier: int) -> None:
     """
     Arguments:
         - noeud (instance): arbre créé par la classe Arbre.
@@ -21,9 +21,9 @@ def ajouter_feuille(noeud, entier: int) -> None:
         gauche = arbre.ABR(entier)
         noeud.gauche = gauche
     elif entier <= noeud.valeur:
-        ajouter(noeud.gauche, entier)
+        inserer_feuille(noeud.gauche, entier)
     elif entier > noeud.valeur and noeud.droite is None:
         droite = arbre.ABR(entier)
         noeud.droite = droite
     else:
-        ajouter(noeud.droite, entier)
+        inserer_feuille(noeud.droite, entier)
