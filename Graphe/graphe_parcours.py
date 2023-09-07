@@ -38,7 +38,7 @@ def largeur(path: str, debut: int, oriente: bool = True) -> list:
             etat[sommet-1] = 'vu'
         while not file_vide.vide(q):
             elem = file_supprimer.supprimer(q)
-            for j in range(G.shape[0]):
+            for j in range(G.shape[1]):
                 if G[elem - 1, j] == 1 and etat[j] is None:
                     file_ajouter.ajouter(q, j + 1)
                     etat[j] = 'vu'
@@ -47,7 +47,7 @@ def largeur(path: str, debut: int, oriente: bool = True) -> list:
     return pere
 
 
-def profondeur(path: str, debut: int, oriente: bool = True) -> list:
+def profondeur(path: str, debut: int, oriente: bool = True) -> tuple:
     """
     Algorithme permettant le parcours en profondeur d'un graphe.
     Il considérera les sommets dans par un ordre croissant.
@@ -57,7 +57,7 @@ def profondeur(path: str, debut: int, oriente: bool = True) -> list:
 
     Argument:
         - path (str): Chemin vers le graphe au format texte.
-        - debut (int): Début du parcours en largeur.
+        - debut (int): Début du parcours en profondeur.
         - oriente (bool): Vrai si le graphe est oriente, Faux sinon.
 
     Return:
@@ -88,3 +88,63 @@ def profondeur(path: str, debut: int, oriente: bool = True) -> list:
                         empiler.empiler(p, j + 1)
                         dernier_pred[j] = elem
     return pere
+
+
+def profondeur_date(G) -> tuple:
+    """
+    Algorithme de calcul d'un parcours en profondeur daté.
+    Les sommets sont considérés dans l'ordre croissant.
+
+    Complexité:
+        - O(n)
+
+    Argument:
+        - G (numpy.array): La matrice d'adjacence du graphe.
+
+    Retour:
+        - premiere_date (list): La liste des premières dates.
+        -> premiere_date[i]: La première date de i.
+        - derniere_date (list): La liste des dernières dates.
+        -> dernière_date[i]: La dernière date de i.
+    """
+    sommet, date = 1, 0
+    etat = [None for _ in range(G.shape[0])]
+    premiere_date, derniere_date = [None for _ in range(G.shape[0])], [None for _ in range(G.shape[0])]
+
+    def parcours(G, sommet: int, date: int, etat: list, premiere_date: list, derniere_date: list):
+        """
+        Algorithme de parcours en profondeur récursif mettant à jour les dates et les états.
+
+        Argument:
+            - G (numpy.array): La matrice d'adjacence du graphe.
+            - sommet (int): Le sommet considéré.
+            - date (int): La date du parcours.
+            - etat (list): La liste contenant les états des sommets.
+            - premiere_date (list): La liste contenant les premières dates des sommets.
+            - derniere_date (list): La liste contenant les dernières dates des sommets.
+
+        Return:
+            - date (int): La dernière date du sommet.
+        """
+        date += 1
+        etat[sommet - 1], premiere_date[sommet - 1] = 'vu', date
+
+        for j in range(G.shape[1]):
+            if G[sommet - 1, j] == 1 and etat[j] is None:
+                date = parcours(G, j + 1, date, etat, premiere_date, derniere_date)
+
+        date += 1
+        derniere_date[sommet - 1] = date
+
+        return date
+
+    date = parcours(G, sommet, date, etat, premiere_date, derniere_date)
+
+    suivant = 0
+
+    while None in etat:
+        suivant += 1
+        if etat[suivant-1] is None:
+            parcours(G, suivant, date, etat, premiere_date, derniere_date)
+
+    return premiere_date, derniere_date

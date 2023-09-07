@@ -36,7 +36,7 @@ def profondeur(path: str) -> int:
             elem = depiler.depiler(p)
             if etat[elem-1] is None:
                 etat[elem-1] = 'vu'
-                for j in range(G.shape[0]-1, -1, -1):
+                for j in range(G.shape[1]-1, -1, -1):
                     if G[elem - 1, j] == 1 and etat[j] is None:
                         empiler.empiler(p, j + 1)
     return composante

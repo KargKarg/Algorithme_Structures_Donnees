@@ -35,7 +35,7 @@ def excentricite_sommet(G, debut: int) -> int:
             etat[sommet - 1] = 'vu'
         while not file_vide.vide(q):
             elem = file_supprimer.supprimer(q)
-            for j in range(G.shape[0]):
+            for j in range(G.shape[1]):
                 if G[elem - 1, j] == 1 and etat[j] is None:
                     file_ajouter.ajouter(q, j + 1)
                     etat[j] = 'vu'
