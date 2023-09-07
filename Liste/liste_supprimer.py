@@ -1,4 +1,4 @@
-from chercher import chercher
+from liste_chercher import chercher
 
 
 def supprimer(liste, objet: any) -> bool:

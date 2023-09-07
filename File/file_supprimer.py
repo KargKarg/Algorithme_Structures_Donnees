@@ -1,4 +1,4 @@
-def supprimer(queue) -> None:
+def supprimer(queue) -> int:
     """
     Arguments:
         - queue (instance): file créé par la classe File.
@@ -13,8 +13,11 @@ def supprimer(queue) -> None:
         Fonction qui renvoie l'élément prioritaire de la file en le supprimant.
 
     """
-    if queue.tete == queue.nmax:
+    if queue.tete == queue.nmax-1:
+        objet = queue.vue[queue.tete]
+        queue.vue[queue.tete] = None
         queue.tete = 0
+        return objet
     objet = queue.vue[queue.tete]
     queue.vue[queue.tete] = None
     queue.tete += 1

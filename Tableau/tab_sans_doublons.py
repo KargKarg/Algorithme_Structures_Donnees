@@ -1,5 +1,5 @@
 from Structures import tableau
-from inserer import inserer
+from tab_inserer import inserer
 
 
 def sans_doublons(arr) -> None:

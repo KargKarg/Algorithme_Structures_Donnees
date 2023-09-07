@@ -1,4 +1,4 @@
-from desequilibre import desequilibre
+from abr_desequilibre import desequilibre
 
 
 def est_avl(noeud) -> bool:

@@ -1,4 +1,4 @@
-from sous_somme import sous_somme
+from tab_sous_somme import sous_somme
 
 
 def sous_somme_max(arr) -> tuple:

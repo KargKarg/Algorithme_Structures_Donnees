@@ -1,7 +1,7 @@
-from pile_vide import vide
+from Pile import pile_vide
 
 
-def depiler(stack) -> None:
+def depiler(stack) -> int:
     """
     Arguments:
         - stack (instance): pile créé par la classe Pile.
@@ -16,10 +16,8 @@ def depiler(stack) -> None:
         Fonction qui renvoie l'élément prioritaire de la pile, None si elle est vide.
 
     """
-    if not vide(stack):
+    if not pile_vide.vide(stack):
         element = stack.vue[stack.sommet]
         stack.vue[stack.sommet] = None
         stack.sommet -= 1
         return element
-    else:
-        return None

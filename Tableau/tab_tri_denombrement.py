@@ -1,6 +1,6 @@
 from Structures import tableau
-from inserer import inserer
-from min_max import min_et_max
+from tab_inserer import inserer
+from tab_min_max import min_et_max
 
 
 def tri_denombrement(arr) -> None:
