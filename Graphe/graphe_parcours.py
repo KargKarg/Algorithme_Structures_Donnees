@@ -1,10 +1,12 @@
+import numpy as np
+
 from Structures import file, pile
 from File import file_ajouter, file_supprimer, file_vide
 from Pile import empiler, depiler, pile_vide
 from Graphe import graphe_lecture
 
 
-def largeur(path: str, debut: int, oriente: bool = True) -> list:
+def largeur(path: str or np.ndarray, debut: int, oriente: bool = True) -> list:
     """
     Algorithme permettant le parcours en largeur d'un graphe.
     Il considérera les sommets dans par un ordre croissant.
@@ -20,7 +22,10 @@ def largeur(path: str, debut: int, oriente: bool = True) -> list:
     Return:
         - pere (list): Arborescence du parcours en largeur. Les racines ont 'None' pour père.
     """
-    G, _, _ = graphe_lecture.matrice_adjacence(path, oriente)
+    if type(path) == str:
+        G, _, _ = graphe_lecture.matrice_adjacence(path, oriente)
+    else:
+        G = path
     q = file.File(G.shape[0])
     etat = [None for _ in range(G.shape[0])]
     pere = [None for _ in range(G.shape[0])]

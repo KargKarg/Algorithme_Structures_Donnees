@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def non_oriente(G):
+def non_oriente(G: np.ndarray) -> np.ndarray:
     """
     Algorithme calculant la matrice d'adjacence non orienté d'un graphe orienté.
 
@@ -24,7 +24,7 @@ def non_oriente(G):
     return G_no
 
 
-def complementaire(G):
+def complementaire(G: np.ndarray) -> np.ndarray:
     """
     Algorithme calculant la matrice d'adjacence du graphe complémentaire.
 
@@ -46,7 +46,7 @@ def complementaire(G):
     return G_comp
 
 
-def transpose(G):
+def transpose(G: np.ndarray) -> np.ndarray:
     """
     Algorithme calculant la matrice d'adjacence du graphe transposé.
 

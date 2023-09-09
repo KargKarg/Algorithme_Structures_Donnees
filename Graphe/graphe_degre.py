@@ -1,7 +1,7 @@
 from Graphe import graphe_lecture
 
 
-def calcul(path: str, oriente: bool = True):
+def calcul(path: str, oriente: bool = True) -> tuple or list:
     """
     Algorithme permettant de calculer le degré (entrant ou sortant, si graphe orienté) de chaque sommet.
 
